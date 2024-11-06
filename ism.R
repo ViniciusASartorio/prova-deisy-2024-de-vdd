@@ -319,7 +319,7 @@ refu_juncao %>%
 #(d) Os 6 países que mais receberam refugiados a partir de 1982 receberam juntos
 #19523 refugiados.
 
-total_top_6 <- ref %>%
+total_top_6 <- refugiados %>%
   filter(ano >= 1982) %>%
   count(id_destino, sort = TRUE) %>%
   slice(1:6) %>%
@@ -340,7 +340,7 @@ total_top_6 <- ref %>%
 
 #(e) Existem 27 países que receberam pelo menos 5382652 refugiados.
 
-pais_5382652 <- ref %>%
+pais_5382652 <- refugiados %>%
   group_by(id_destino) %>%
   summarise(total_refugiados = sum(refugiados)) %>%
   filter(total_refugiados >= 5382652) 

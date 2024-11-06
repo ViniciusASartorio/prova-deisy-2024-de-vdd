@@ -1,3 +1,12 @@
+library(usethis)
+gitcreds::gitcreds_set()
+create_from_github()
+usethis::create_github_token()
+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
+
+
+
+
 ##bruhhhh
 # Carregando as bibliotecas
 library(dplyr)
